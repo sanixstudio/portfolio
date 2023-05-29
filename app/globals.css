@@ -18,8 +18,8 @@
 }
 
 body {
-  background-image: url("/images/bg3.png");
-  /* background-image: linear-gradient(to right bottom, #01052ded, #71028b); */
+  /* background-image: url("/images/bg3.png"); */
+  background-image: linear-gradient(to right bottom, #01052ded, #71028b);
   color: #eaeaea;
   background-size: cover;
 }

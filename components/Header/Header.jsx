@@ -4,7 +4,7 @@ import React from "react";
 
 const Header = () => {
   return (
-    <div className="w-full max-w-[1440px] fixed flex-row-between p-4 items-center mx-auto">
+    <div className="hidden bg-teal-500/40 sticky w-full max-w-[1440px] flex-row-between p-4 items-center mx-auto">
       <a href="/">
         <Button pill gradientMonochrome="lime">
           <h1 className="text-3xl font-bold">AN</h1>
