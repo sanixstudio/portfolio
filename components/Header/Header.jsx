@@ -1,13 +1,12 @@
 "use client";
-import { Button } from "flowbite-react";
 import React from "react";
 
 const Header = () => {
   return (
-    <div className="bg-gray-100/10 sticky w-full max-w-[1440px] flex-row-between p-4 items-center mx-auto">
+    <div className="sticky w-full max-w-[1220px] flex-row-between p-4 items-center justify-between mx-auto">
       <a href="/">
-        <button className="bt-g">
-          <h1 className="text-2xl md:text-3xl font-bold">AN</h1>
+        <button className="rounded-full bg-teal-700 bg-gradient-to-r from-purple-500 to-pink-500 p-1 w-[50px] h-[50px]">
+          <h1 className="text-2xl md:text-3xl">AN</h1>
         </button>
       </a>
       <ul className="hidden md:flex gap-10">
@@ -24,7 +23,7 @@ const Header = () => {
           <a href="#contact">Contact</a>
         </li>
       </ul>
-      <div>user</div>
+      <div className=""></div>
     </div>
   );
 };
