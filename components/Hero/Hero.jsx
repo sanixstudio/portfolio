@@ -6,23 +6,32 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <div className="h-screen mt-96 snap-start justify-center lg:justify-between items-center flex flex-col lg:flex-row p-4 sm:p-8 gap-10">
-      <div className="flex flex-col gap-10 border">
+    <div className="h-screen snap-start justify lg:justify-between items-center flex flex-col lg:flex-row p-4 sm:p-8 gap-10">
+      <div className="flex flex-col gap-10 text-center mt-28">
         <div>
-          <h1 className="text-7xl font-bold uppercase">{PERSONAL_INFO.name}</h1>
-          <p className="text-2xl font-semibold">{PERSONAL_INFO.tagline}</p>
+          <h1 className="text-4xl tracking-widest font-bold uppercase">
+            {PERSONAL_INFO.name}
+          </h1>
+          <p className=" font-semibold">{PERSONAL_INFO.tagline}</p>
         </div>
         <p>{PERSONAL_INFO.description}</p>
         <div className="flex gap-3 max-w-lg">
-          <Button gradientDuoTone="purpleToPink" size="lg" pill fullSized>
+          <Button gradientDuoTone="purpleToPink" size="sm" pill fullSized>
             Learn More
           </Button>
-          <Button gradientDuoTone="purpleToPink" outline pill size="lg" fullSized>
+          <Button
+            gradientDuoTone="purpleToPink"
+            className="bg-red-500"
+            outline
+            pill
+            size={"sm"}
+            fullSized
+          >
             My Work
           </Button>
         </div>
       </div>
-      <div>
+      <div className="hidden md:visible">
         <Image
           width={400}
           height={500}

@@ -4,13 +4,13 @@ import React from "react";
 
 const Header = () => {
   return (
-    <div className="hidden bg-teal-500/40 sticky w-full max-w-[1440px] flex-row-between p-4 items-center mx-auto">
+    <div className="bg-gray-100/10 sticky w-full max-w-[1440px] flex-row-between p-4 items-center mx-auto">
       <a href="/">
-        <Button pill gradientMonochrome="lime">
-          <h1 className="text-3xl font-bold">AN</h1>
-        </Button>
+        <button className="bt-g">
+          <h1 className="text-2xl md:text-3xl font-bold">AN</h1>
+        </button>
       </a>
-      <ul className="flex gap-10">
+      <ul className="hidden md:flex gap-10">
         <li>
           <a href="/">Home</a>
         </li>
