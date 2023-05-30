@@ -1,6 +1,14 @@
 "use client";
 import React from "react";
 
+export const NavLink = ({ name, linkTo }) => {
+  return (
+    <li>
+      <a href={linkTo}>{name}</a>
+    </li>
+  );
+};
+
 const Header = () => {
   return (
     <div className="sticky w-full max-w-[1220px] flex-row-between p-4 items-center  mx-auto">
@@ -10,32 +18,16 @@ const Header = () => {
         </button>
       </a>
       <ul className="hidden md:flex gap-10">
-        <li>
-          <a href="/">Home</a>
-        </li>
-        <li>
-          <a href="#about">About</a>
-        </li>
-        <li>
-          <a href="#work">Work</a>
-        </li>
-        <li>
-          <a href="#contact">Contact</a>
-        </li>
+        <NavLink name={"Home"} linkTo={"/"} />
+        <NavLink name={"Home"} linkTo={"#"} />
+        <NavLink name={"Home"} linkTo={"#"} />
+        <NavLink name={"Home"} linkTo={"#"} />
       </ul>
       <ul>
-        <li>
-          <a href="/">Home</a>
-        </li>
-        <li>
-          <a href="/">About</a>
-        </li>
-        <li>
-          <a href="/">Work</a>
-        </li>
-        <li>
-          <a href="/">Contact</a>
-        </li>
+        <NavLink name="Home" linkTo={"#"} />
+        <NavLink name="About" linkTo={"#"} />
+        <NavLink name="Work" linkTo={"#"} />
+        <NavLink name="Contact" linkTo={"#"} />
       </ul>
     </div>
   );

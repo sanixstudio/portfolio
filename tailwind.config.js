@@ -13,6 +13,9 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      dropShadow: {
+        'glossyShadows': '20px 20px 50px rgba(0, 0, 0, 0.5)]'
+      }
     },
   },
   plugins: [require("flowbite/plugin")],

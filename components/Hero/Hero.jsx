@@ -9,7 +9,7 @@ import { OrbitControls } from "@react-three/drei";
 const Hero = () => {
   return (
     <div className="snap-start h-[90%] flex items-center px-4 sm:gap-10 sm:flex-col sm:justify-center md:flex-row">
-      <div className="flex flex-col items-center gap-20 sm:gap-10 lg:gap-20 text-center lg:items-start lg:text-left md:w-2/3">
+      <div className="flex flex-col drop-shadow-glossyShadows items-center gap-20 sm:gap-10 lg:gap-20 text-center lg:items-start lg:text-left md:w-2/3">
         <div>
           <h1 className="text-5xl sm:text-6xl md:text-7xl tracking-widest font-bold uppercase">
             {PERSONAL_INFO.name}
