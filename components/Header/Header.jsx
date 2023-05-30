@@ -1,5 +1,7 @@
 "use client";
 import React from "react";
+import { CiMenuFries } from "react-icons/ci";
+import { GrClose } from "react-icons/gr";
 
 export const NavLink = ({ name, linkTo }) => {
   return (
@@ -10,6 +12,11 @@ export const NavLink = ({ name, linkTo }) => {
 };
 
 const Header = () => {
+  const [showMenu, setShowMenu] = React.useState(false);
+  const toggleMenu = () => {
+    setShowMenu(!showMenu);
+  };
+
   return (
     <div className="sticky w-full max-w-[1220px] flex-row-between p-4 items-center  mx-auto">
       <a href="/">
@@ -19,16 +26,20 @@ const Header = () => {
       </a>
       <ul className="hidden md:flex gap-10">
         <NavLink name={"Home"} linkTo={"/"} />
-        <NavLink name={"Home"} linkTo={"#"} />
-        <NavLink name={"Home"} linkTo={"#"} />
-        <NavLink name={"Home"} linkTo={"#"} />
+        <NavLink name={"About"} linkTo={"#"} />
+        <NavLink name={"Work"} linkTo={"#"} />
+        <NavLink name={"Contact"} linkTo={"#"} />
       </ul>
-      <ul>
-        <NavLink name="Home" linkTo={"#"} />
-        <NavLink name="About" linkTo={"#"} />
-        <NavLink name="Work" linkTo={"#"} />
-        <NavLink name="Contact" linkTo={"#"} />
-      </ul>
+      <CiMenuFries size={24} className="md:hidden" onClick={() => toggleMenu} />
+      <div className="flex flex-col md:hidden bg-red-600 opacity-50 absolute w-1/3 h-screen top-0 right-0">
+        <ul className="">
+          <GrClose size={24} className="md:hidden text-white " />
+          <NavLink name="Home" linkTo={"#"} />
+          <NavLink name="About" linkTo={"#"} />
+          <NavLink name="Work" linkTo={"#"} />
+          <NavLink name="Contact" linkTo={"#"} />
+        </ul>
+      </div>
     </div>
   );
 };
