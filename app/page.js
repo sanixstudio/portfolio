@@ -9,7 +9,7 @@ export default function Home() {
     <Flowbite theme={{ customTheme }}>
       {/* <Header /> */}
       <div className="flex">
-        {/* <Navbar /> */}
+        <Navbar />
         <main className="max-w-[1220px] mx-auto bg-gray-5-- backdrop-opacity-30">
           <Hero />
           <About />
