@@ -18,10 +18,11 @@
 }
 
 body {
-  /* background-image: url("/images/bg3.png"); */
-  /* background-image: linear-gradient(to right bottom, #01052ded, #71028b); */
-  background-color: #16171D;
+  background-image: url("/images/light.png");
+  background-repeat: no-repeat;
+  background-color: #16171d;
   background-size: cover;
+  background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   color: #eaeaea;
@@ -44,7 +45,15 @@ body {
   background: #fff;
 }
 
-.box {
-  /* color: #7f64a8; */
-  box-shadow: 1em 0em 15em 0px rgba(0, 0, 0, 0.6);
+.btn-shadow {
+  box-shadow: 0 4px 1em rgba(0, 0, 0, 0.6);
+}
+
+@layer components {
+  .primary-btn-border {
+    @apply rounded-md flex bg-gradient-to-r from-[#272932] to-[#42444F] p-[1px] hover:bg-gradient-to-r hover:from-[#42444F] hover:to-[#272932] transition  ease-in duration-300 btn-shadow;
+  }
+  .primary-btn-bg {
+    @apply rounded-md p-4 bg-gradient-to-r from-[#42444F] to-[#16171D] hover:bg-gradient-to-r hover:from-[#16171D] hover:to-[#42444F] ease-in transition  duration-300;
+  }
 }
