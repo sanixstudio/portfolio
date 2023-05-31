@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className="snap-y scroll-smooth snap-mandatory h-screen overflow-scroll scroll-bar-hide bg-fixed">
       <body className={inter.className}>{children}</body>
     </html>
   );

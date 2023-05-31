@@ -8,7 +8,7 @@ import { OrbitControls } from "@react-three/drei";
 
 const Hero = () => {
   return (
-    <div className="snap-start h-[90%] flex items-center px-4 sm:gap-10 sm:flex-col sm:justify-center md:flex-row">
+    <div className="snap-start h-screen flex items-center px-4 sm:gap-10 sm:flex-col sm:justify-center md:flex-row">
       <div className="flex flex-col drop-shadow-glossyShadows items-center gap-20 sm:gap-10 lg:gap-20 text-center lg:items-start lg:text-left md:w-2/3">
         <div>
           <h1 className="text-5xl sm:text-6xl md:text-7xl tracking-widest font-bold uppercase">
@@ -22,19 +22,16 @@ const Hero = () => {
           {PERSONAL_INFO.description}
         </p>
         <div className="max-w-lg w-full flex flex-col lg:flex-row gap-3">
-          <Button gradientDuoTone="purpleToPink" size="xl" pill fullSized>
-            Learn More
-          </Button>
-          <Button
-            gradientDuoTone="purpleToPink"
-            className="bg-red-500"
-            outline
-            pill
-            size={"xl"}
-            fullSized
-          >
-            My Work
-          </Button>
+          <button className="w-full h-fit rounded-md flex bg-gradient-to-r from-[#272932] to-[#42444F] p-[1px]">
+            <span className="w-full h-fit p-4 rounded-md bg-gradient-to-r from-[#42444F] to-[#16171D] ">
+              My Work
+            </span>
+          </button>
+          <button className="w-full h-fit rounded-md flex bg-gradient-to-r from-[#272932] to-[#42444F] p-[1px]">
+            <span className="w-full h-fit p-4 rounded-md bg-gradient-to-r from-[#42444F] to-[#16171D] ">
+              My Work
+            </span>
+          </button>
         </div>
       </div>
       <div className="hidden lg:block w-1/3 h-full max-h-[450px]">

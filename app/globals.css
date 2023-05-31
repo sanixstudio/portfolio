@@ -19,7 +19,11 @@
 
 body {
   /* background-image: url("/images/bg3.png"); */
-  background-image: linear-gradient(to right bottom, #01052ded, #71028b);
+  /* background-image: linear-gradient(to right bottom, #01052ded, #71028b); */
+  background-color: #16171D;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   color: #eaeaea;
   background-size: cover;
 }
@@ -38,4 +42,9 @@ body {
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
   background: #fff;
+}
+
+.box {
+  /* color: #7f64a8; */
+  box-shadow: 1em 0em 15em 0px rgba(0, 0, 0, 0.6);
 }
