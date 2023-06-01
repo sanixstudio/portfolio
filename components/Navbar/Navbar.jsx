@@ -18,10 +18,10 @@ export const MainNav = () => {
   return (
     <div id="navbar-default">
       <ul class="flex flex-col gap-5 text-center">
-        <NavLink active={true} title="Home" href="/" />
-        <NavLink title="About" href="#" />
-        <NavLink title="Work" href="#" />
-        <NavLink title="Contact" href="#" />
+        <NavLink active={true} title="Home" href="#home" />
+        <NavLink title="About" href="#about" />
+        <NavLink title="Work" href="#work" />
+        <NavLink title="Contact" href="#contact" />
       </ul>
     </div>
   );

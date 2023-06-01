@@ -1,11 +1,11 @@
 "use client";
-import React, { useEffect } from "react";
+import React from "react";
 import { PERSONAL_INFO } from "@/data/personal";
 import Image from "next/image";
 
 const Hero = () => {
   return (
-    <div className="snap-start hero">
+    <div className="snap-start hero" id="home">
       <div className="flex items-center flex-col justify-center px-4 h-screen gap-20">
         <Image width={160} height={160} src="/images/adi.png" alt="adi logo" />
         <div className="flex flex-col drop-shadow-glossyShadows items-center justify-center gap-20 sm:gap-10 lg:gap-20 text-center lg:items-start lg:text-left md:w-2/3">
