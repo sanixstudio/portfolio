@@ -51,9 +51,9 @@ body {
 
 @layer components {
   .primary-btn-border {
-    @apply rounded-md flex bg-gradient-to-r from-[#272932] to-[#42444F] p-[1px] hover:bg-gradient-to-r hover:from-[#42444F] hover:to-[#272932] transition  ease-in duration-300 btn-shadow;
+    @apply rounded-md flex bg-gradient-to-r from-[#272932] to-[#42444F] p-[1px]  transition  ease-in duration-300 btn-shadow;
   }
   .primary-btn-bg {
-    @apply rounded-md p-4 bg-gradient-to-r from-[#42444F] to-[#16171D] hover:bg-gradient-to-r hover:from-[#16171D] hover:to-[#42444F] ease-in transition  duration-300;
+    @apply rounded-md p-4 bg-gradient-to-r from-[#42444F] to-[#16171D] ease-in transition  duration-300;
   }
 }
