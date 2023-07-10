@@ -1,17 +1,23 @@
-import { Inter } from "next/font/google";
+"use client";
+import { Navbar } from "@/components";
 import "./globals.css";
+import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Adi's Portfolio",
-  description: "My 3d portfolio",
+  description:
+    "Personally customized Portfolio website created with Next and TailwindCSS. Created by Purrgramer 2023",
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="snap-y scroll-smooth snap-mandatory h-screen overflow-scroll scroll-bar-hide bg-fixed">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className="h-screen bg-fixed">
+      <body className={inter.className}>
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }

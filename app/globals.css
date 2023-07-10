@@ -27,6 +27,7 @@ body {
   background-attachment: fixed;
   color: #eaeaea;
   background-size: cover;
+  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {

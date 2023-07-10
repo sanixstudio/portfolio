@@ -19,10 +19,10 @@ export const MainNav = () => {
   return (
     <div id="navbar-default">
       <ul className="flex flex-col gap-5 text-center">
-        <NavLink active={true} title="Home" href="#home" />
-        <NavLink title="About" href="#about" />
-        <NavLink title="Work" href="#work" />
-        <NavLink title="Contact" href="#contact" />
+        <NavLink active={true} title="Home" href="/" />
+        <NavLink title="About" href="about" />
+        <NavLink title="Work" href="work" />
+        <NavLink title="Contact" href="contact" />
       </ul>
     </div>
   );
@@ -30,10 +30,10 @@ export const MainNav = () => {
 
 const Navbar = () => {
   return (
-    <motion.div className="hidden md:block">
-      <nav className="fixed h-full flex z-50">
+    <motion.div>
+      <nav className="hidden md:flex fixed h-full z-50">
         <div className="flex flex-col flex-wrap items-between justify-between h-full mx-auto p-4">
-          <a href="/" className="">
+          <a href="/">
             <span className="text-4xl whitespace-nowrap">AN</span>
           </a>
           <div className="flex-1 max-h-[40%] flex justify-center">
