@@ -7,6 +7,7 @@ import { v1 as uuidv1 } from "uuid";
 import { Carousel } from "react-responsive-carousel";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const Works = () => {
   const projects = [
@@ -98,10 +99,14 @@ const Works = () => {
                       transition={{ duration: 0.2 }}
                       className=" h-fit primary-btn-border"
                     >
-                      <div className="flex items-center gap-3 h-fit primary-btn-bg px-10">
+                      <Link
+                        href={project.codeLink}
+                        target="_blank"
+                        className="flex items-center gap-3 h-fit primary-btn-bg px-10"
+                      >
                         <span>Code</span>
                         <FiCode size={22} />
-                      </div>
+                      </Link>
                     </button>
                     <button
                       initial={{ y: "300%", opacity: 0 }}
@@ -109,10 +114,14 @@ const Works = () => {
                       transition={{ duration: 0.2 }}
                       className=" h-fit primary-btn-border"
                     >
-                      <div className="flex items-center gap-3 h-fit primary-btn-bg px-10">
+                      <Link
+                        href={project.demoLink}
+                        target="_blank"
+                        className="flex items-center gap-3 h-fit primary-btn-bg px-10"
+                      >
                         <span>Demo</span>
                         <HiCursorClick size={22} />
-                      </div>
+                      </Link>
                     </button>
                   </div>
                 </div>

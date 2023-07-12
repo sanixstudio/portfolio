@@ -1,4 +1,6 @@
+"use client";
 import React from "react";
+import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 
 export const NavLink = ({ title, href, active }) => {
@@ -16,13 +18,20 @@ export const NavLink = ({ title, href, active }) => {
 };
 
 export const MainNav = () => {
+  const path = usePathname();
+  const pageName = path.split("/")[1];
+
   return (
     <div id="navbar-default">
       <ul className="flex flex-col gap-5 text-center">
-        <NavLink active={true} title="Home" href="/" />
-        <NavLink title="About" href="about" />
-        <NavLink title="Work" href="work" />
-        <NavLink title="Contact" href="contact" />
+        <NavLink active={"" === pageName} title="Home" href="/" />
+        <NavLink active={"about" === pageName} title="About" href="about" />
+        <NavLink active={"work" === pageName} title="Work" href="work" />
+        <NavLink
+          active={"contact" === pageName}
+          title="Contact"
+          href="contact"
+        />
       </ul>
     </div>
   );
