@@ -20,13 +20,11 @@
 body {
   background-image: url("/images/light.png");
   background-repeat: no-repeat;
-  background-color: #16171d;
+  background-color: #020617;
+  background-position: center;
   background-size: cover;
-  background-position: center center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   color: #eaeaea;
-  background-size: cover;
   scroll-behavior: smooth;
 }
 
@@ -57,4 +55,10 @@ body {
   .primary-btn-bg {
     @apply rounded-md p-4 bg-gradient-to-r from-[#42444F] to-[#16171D] ease-in transition  duration-300;
   }
+}
+
+.carousel-dots {
+  /* list-style: none;
+  margin: 0;
+  padding: 0; */
 }
