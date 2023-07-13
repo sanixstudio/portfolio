@@ -21,7 +21,7 @@ const About = () => {
     <div className="h-screen p-4 md:px-40">
       <div className="my-20 pb-40 flex flex-col md:max-w-[1440px] mx-auto">
         <motion.div
-          initial={{ x: "300%", opacity: 0 }}
+          initial={{ x: "-300%", opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.6 }}
           className="mb-20"
@@ -31,7 +31,7 @@ const About = () => {
         </motion.div>
         <div className="flex flex-col lg:flex-row w-full justify-center items-center h-full md:gap-10 xl:gap-20  2xl:gap-40">
           <motion.div
-            initial={{ x: "300%", opacity: 0 }}
+            initial={{ x: "-300%", opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
             className="flex-3 md:w-full self-start p-10 bg-gradient-to-t from-[#42444F] to-[#272932] max-w-[420px]"
@@ -45,7 +45,7 @@ const About = () => {
             />
           </motion.div>
           <motion.div
-            initial={{ x: "-300%", opacity: 0 }}
+            initial={{ x: "300%", opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
             className="self-start w-full"
@@ -118,7 +118,7 @@ const About = () => {
           initial={{ y: "-300%", opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5 }}
-          className="mt-80"
+          className="mt-60"
         >
           <h2 className="text-4xl font-bold">4+ Years of experience in</h2>
           <div className="mt-10 grid grid-cols-1 xl:grid-cols-2 gap-14">
@@ -127,10 +127,11 @@ const About = () => {
                 <BsCheck2 size={36} />
               </div>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Dolorum eos tempora temporibus corporis, ipsa corrupti vitae,
-                dolor saepe laboriosam adipisci quis? Expedita, quod. Quos unde
-                esse inventore nesciunt quas atque?
+                Website Development: Frontend developers create high-quality
+                websites that align with the company&apos;s brand and goals.
+                They focus on creating user-friendly interfaces, intuitive
+                navigation, and compelling visuals to enhance user engagement
+                and drive conversions.
               </p>
             </div>
             <div className="flex gap-5 items-center">
@@ -138,10 +139,12 @@ const About = () => {
                 <BsCheck2 size={36} />
               </div>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Dolorum eos tempora temporibus corporis, ipsa corrupti vitae,
-                dolor saepe laboriosam adipisci quis? Expedita, quod. Quos unde
-                esse inventore nesciunt quas atque?
+                User Experience (UX) Design: Frontend developers prioritize
+                creating exceptional user experiences by optimizing the
+                usability and accessibility of websites. They ensure that users
+                can easily navigate the site, find information, and complete
+                desired actions, leading to increased customer satisfaction and
+                retention.
               </p>
             </div>
             <div className="flex gap-5 items-center">
@@ -149,10 +152,11 @@ const About = () => {
                 <BsCheck2 size={36} />
               </div>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Dolorum eos tempora temporibus corporis, ipsa corrupti vitae,
-                dolor saepe laboriosam adipisci quis? Expedita, quod. Quos unde
-                esse inventore nesciunt quas atque?
+                Responsive Design: Frontend developers specialize in building
+                responsive websites that adapt seamlessly to different devices
+                and screen sizes. This ensures that the company&apos;s website
+                is accessible and visually appealing across desktops, tablets,
+                and mobile devices, catering to a wide range of users.
               </p>
             </div>
             <div className="flex gap-5 items-center">
@@ -160,10 +164,12 @@ const About = () => {
                 <BsCheck2 size={36} />
               </div>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Dolorum eos tempora temporibus corporis, ipsa corrupti vitae,
-                dolor saepe laboriosam adipisci quis? Expedita, quod. Quos unde
-                esse inventore nesciunt quas atque?
+                Performance Optimization: Frontend developers optimize websites
+                for fast loading times and smooth performance. By employing
+                techniques like code optimization, caching, and asset
+                compression, they enhance the overall user experience and
+                improve search engine rankings, ultimately driving more organic
+                traffic to the site.
               </p>
             </div>
             <div className="flex gap-5 items-center">
@@ -171,10 +177,11 @@ const About = () => {
                 <BsCheck2 size={36} />
               </div>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Dolorum eos tempora temporibus corporis, ipsa corrupti vitae,
-                dolor saepe laboriosam adipisci quis? Expedita, quod. Quos unde
-                esse inventore nesciunt quas atque?
+                Collaboration with Backend Developers: Frontend developers work
+                closely with backend developers to ensure smooth integration and
+                seamless communication between the frontend and backend
+                components. This collaboration ensures efficient data flow,
+                robust functionality, and a reliable user experience.
               </p>
             </div>
             <div className="flex gap-5 items-center">
@@ -182,10 +189,11 @@ const About = () => {
                 <BsCheck2 size={36} />
               </div>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Dolorum eos tempora temporibus corporis, ipsa corrupti vitae,
-                dolor saepe laboriosam adipisci quis? Expedita, quod. Quos unde
-                esse inventore nesciunt quas atque?
+                Continuous Maintenance and Support: Frontend developers provide
+                ongoing maintenance and support for websites and applications.
+                They promptly address any issues, bugs, or compatibility
+                problems, ensuring that the website remains operational, secure,
+                and up-to-date.
               </p>
             </div>
           </div>
