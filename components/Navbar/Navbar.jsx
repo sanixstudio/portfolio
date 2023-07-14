@@ -3,12 +3,12 @@ import { usePathname } from "next/navigation";
 import { BiMenuAltLeft } from "react-icons/bi";
 import Link from "next/link";
 
-const NavLink = ({ title, href }) => {
+const NavLink = ({ title, href, toggleMenu }) => {
   const pathname = usePathname();
   const active = pathname === href;
 
   return (
-    <li>
+    <li onClick={() => toggleMenu()}>
       <Link href={href}>
         <span className={`text-${active ? "gray-300 font-bold" : "gray-500"}`}>
           {title}
@@ -18,7 +18,7 @@ const NavLink = ({ title, href }) => {
   );
 };
 
-const MainNav = ({ isMobile }) => {
+const MainNav = ({ isMobile, toggleMenu }) => {
   return (
     <ul
       className={`flex flex-col gap-5 ${
@@ -27,10 +27,10 @@ const MainNav = ({ isMobile }) => {
           : "text-center"
       }`}
     >
-      <NavLink title="Home" href="/" />
-      <NavLink title="About" href="/about" />
-      <NavLink title="Work" href="/work" />
-      <NavLink title="Contact" href="/contact" />
+      <NavLink toggleMenu={toggleMenu} title="Home" href="/" />
+      <NavLink toggleMenu={toggleMenu} title="About" href="/about" />
+      <NavLink toggleMenu={toggleMenu} title="Work" href="/work" />
+      <NavLink toggleMenu={toggleMenu} title="Contact" href="/contact" />
     </ul>
   );
 };
@@ -80,7 +80,7 @@ const Navbar = () => {
         </div>
         {showMenu && (
           <div className="flex flex-col items-center justify-center h-screen">
-            <MainNav isMobile={isMobile} />
+            <MainNav toggleMenu={toggleMenu} isMobile={isMobile} />
           </div>
         )}
       </nav>
@@ -94,7 +94,11 @@ const Navbar = () => {
           <div className="flex-1 max-h-[40%] flex justify-center">
             <div className="bg-gray-600 w-[1px]"></div>
           </div>
-          <MainNav isMobile={isMobile} className="flex-1" />
+          <MainNav
+            toggleMenu={toggleMenu}
+            isMobile={isMobile}
+            className="flex-1"
+          />
           <div className="flex-1 max-h-[40%] flex justify-center">
             <div className="bg-gray-600 w-[1px]"></div>
           </div>
