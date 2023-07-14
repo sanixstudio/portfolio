@@ -50,7 +50,7 @@ const About = () => {
             transition={{ duration: 0.5 }}
             className="self-start w-full"
           >
-            <h2 className="text-4xl mb-10 font-bold uppercase">
+            <h2 className="mt-28 md:mt-0 text-4xl mb-10 font-bold uppercase">
               A little about myself
             </h2>
             <p className="mb-10 leading-7">
@@ -69,7 +69,7 @@ const About = () => {
             </p>
             <div>
               <h2 className="text-2xl mt-20 mb-10">Skilled In</h2>
-              <div className="flex flex-wrap gap-5">
+              <div className="flex justify-center md:justify-normal flex-wrap gap-5">
                 <div className="bg-white/5 w-[75px] h-[75px] hover:bg-white/10 flex gap-2 flex-col justify-center items-center">
                   <AiOutlineHtml5 color="#dd4b25" size={36} />
                   <span className="text-xs">HTML</span>
@@ -118,82 +118,55 @@ const About = () => {
           initial={{ y: "-300%", opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5 }}
-          className="mt-60"
+          className="mt-40 md:mt-60"
         >
-          <h2 className="text-4xl font-bold">4+ Years of experience in</h2>
-          <div className="mt-10 grid grid-cols-1 xl:grid-cols-2 gap-14">
+          <h2 className="text-4xl font-bold mb-5">
+            4+ Years of experience as Full-stack Engineer
+            <br />
+          </h2>
+          <div className="mt-10 grid grid-cols-1 xl:grid-cols-2 gap-20">
             <div className="flex gap-5 items-center">
-              <div>
-                <BsCheck2 size={36} />
-              </div>
-              <p>
-                Website Development: Frontend developers create high-quality
-                websites that align with the company&apos;s brand and goals.
-                They focus on creating user-friendly interfaces, intuitive
-                navigation, and compelling visuals to enhance user engagement
-                and drive conversions.
+              <p className="leading-7">
+                <span className="tracking-widest border-b border-gray-700 pb-3 font-bold text-xl uppercase mb-5 block">
+                  Website Development
+                </span>
+                I create high-quality websites that align with the
+                company&apos;s brand and goals. Focus on creating user-friendly
+                interfaces, intuitive navigation, and compelling visuals to
+                enhance user engagement and drive conversions.
               </p>
             </div>
             <div className="flex gap-5 items-center">
-              <div>
-                <BsCheck2 size={36} />
-              </div>
-              <p>
-                User Experience (UX) Design: Frontend developers prioritize
-                creating exceptional user experiences by optimizing the
-                usability and accessibility of websites. They ensure that users
-                can easily navigate the site, find information, and complete
-                desired actions, leading to increased customer satisfaction and
+              <p className="leading-7">
+                <span className="tracking-widest border-b border-gray-700 pb-3 font-bold text-xl uppercase mb-5 block">
+                  User Experience (UX) Design:
+                </span>
+                I optimize website usability and accessibility for exceptional
+                user experiences, increasing customer satisfaction and
                 retention.
               </p>
             </div>
             <div className="flex gap-5 items-center">
-              <div>
-                <BsCheck2 size={36} />
-              </div>
-              <p>
-                Responsive Design: Frontend developers specialize in building
-                responsive websites that adapt seamlessly to different devices
-                and screen sizes. This ensures that the company&apos;s website
-                is accessible and visually appealing across desktops, tablets,
-                and mobile devices, catering to a wide range of users.
+              <p className="leading-7">
+                <span className="tracking-widest border-b border-gray-700 pb-3 font-bold text-xl uppercase mb-5 block">
+                  Responsive Design:
+                </span>
+                I specialize in responsive design, creating websites that
+                seamlessly adapt to various devices and screen sizes. This
+                ensures accessibility and visual appeal across desktops,
+                tablets, and mobile devices, catering to a diverse user base.
               </p>
             </div>
             <div className="flex gap-5 items-center">
-              <div>
-                <BsCheck2 size={36} />
-              </div>
-              <p>
-                Performance Optimization: Frontend developers optimize websites
-                for fast loading times and smooth performance. By employing
-                techniques like code optimization, caching, and asset
-                compression, they enhance the overall user experience and
-                improve search engine rankings, ultimately driving more organic
-                traffic to the site.
-              </p>
-            </div>
-            <div className="flex gap-5 items-center">
-              <div>
-                <BsCheck2 size={36} />
-              </div>
-              <p>
-                Collaboration with Backend Developers: Frontend developers work
-                closely with backend developers to ensure smooth integration and
-                seamless communication between the frontend and backend
-                components. This collaboration ensures efficient data flow,
-                robust functionality, and a reliable user experience.
-              </p>
-            </div>
-            <div className="flex gap-5 items-center">
-              <div>
-                <BsCheck2 size={36} />
-              </div>
-              <p>
-                Continuous Maintenance and Support: Frontend developers provide
-                ongoing maintenance and support for websites and applications.
-                They promptly address any issues, bugs, or compatibility
-                problems, ensuring that the website remains operational, secure,
-                and up-to-date.
+              <p className="leading-7">
+                <span className="tracking-widest border-b border-gray-700 pb-3 font-bold text-xl uppercase mb-5 block">
+                  Performance Optimization:
+                </span>
+                I optimize websites for fast loading times and smooth
+                performance. Through techniques such as code optimization,
+                caching, and asset compression, I enhance the user experience,
+                boost search engine rankings, and drive organic traffic to the
+                site.
               </p>
             </div>
           </div>

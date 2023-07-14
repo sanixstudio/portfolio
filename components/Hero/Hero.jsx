@@ -6,8 +6,8 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <div className="flex hero h-screen">
-      <div className="flex items-center flex-col md:justify-center px-4 gap-20">
+    <div className="flex hero h-screen items-center">
+      <div className="flex items-center flex-col md:justify-center px-4 gap-10">
         <motion.div
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: [2, 1] }}

@@ -26,7 +26,7 @@ const MainNav = ({ isMobile, setShowMenu }) => {
     <ul
       className={`flex flex-col gap-5 ${
         isMobile
-          ? "w-full h-screen  p-10 bg-slate-900 justify-center items-center text-2xl"
+          ? "w-full h-screen -mt-20 p-10 bg-slate-900 justify-center items-center text-2xl"
           : "text-center"
       }`}
     >
