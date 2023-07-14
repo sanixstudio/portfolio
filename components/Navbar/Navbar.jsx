@@ -40,7 +40,9 @@ const MainNav = ({ isMobile, setShowMenu }) => {
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [isMobile, setIsMobile] = useState(
+    typeof window !== "undefined" && window.innerWidth < 768
+  );
 
   const toggleMenu = () => {
     setShowMenu((prevState) => !prevState);

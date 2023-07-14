@@ -5,7 +5,6 @@ import Image from "next/image";
 import { AiOutlineHtml5 } from "react-icons/ai";
 import { SiExpress } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
-import { BsCheck2 } from "react-icons/bs";
 import {
   BiLogoCss3,
   BiLogoJavascript,
