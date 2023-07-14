@@ -3,34 +3,37 @@ import { usePathname } from "next/navigation";
 import { BiMenuAltLeft } from "react-icons/bi";
 import Link from "next/link";
 
-const NavLink = ({ title, href, toggleMenu }) => {
+const NavLink = ({ title, href, setShowMenu }) => {
   const pathname = usePathname();
   const active = pathname === href;
 
   return (
-    <li onClick={() => toggleMenu()}>
+    <li>
       <Link href={href}>
-        <span className={`text-${active ? "gray-300 font-bold" : "gray-500"}`}>
+        <button
+          onClick={() => setShowMenu(false)}
+          className={`text-${active ? "gray-300 font-bold" : "gray-500"}`}
+        >
           {title}
-        </span>
+        </button>
       </Link>
     </li>
   );
 };
 
-const MainNav = ({ isMobile, toggleMenu }) => {
+const MainNav = ({ isMobile, setShowMenu }) => {
   return (
     <ul
       className={`flex flex-col gap-5 ${
         isMobile
-          ? "w-full h-screen bg-slate-900 justify-center items-center text-2xl"
+          ? "w-full h-screen  p-10 bg-slate-900 justify-center items-center text-2xl"
           : "text-center"
       }`}
     >
-      <NavLink toggleMenu={toggleMenu} title="Home" href="/" />
-      <NavLink toggleMenu={toggleMenu} title="About" href="/about" />
-      <NavLink toggleMenu={toggleMenu} title="Work" href="/work" />
-      <NavLink toggleMenu={toggleMenu} title="Contact" href="/contact" />
+      <NavLink setShowMenu={setShowMenu} title="Home" href="/" />
+      <NavLink setShowMenu={setShowMenu} title="About" href="/about" />
+      <NavLink setShowMenu={setShowMenu} title="Work" href="/work" />
+      <NavLink setShowMenu={setShowMenu} title="Contact" href="/contact" />
     </ul>
   );
 };
@@ -64,14 +67,14 @@ const Navbar = () => {
           isMobile ? "w-full" : "max-w-[100px]"
         }`}
       >
-        <div className="flex justify-between items-center h-16 px-4 md:hidden">
+        <div className="flex justify-between items-center h-16 px-4 md:hidden relative">
           {!isMobile && (
             <Link href="/">
               <span className="text-4xl whitespace-nowrap">AN</span>
             </Link>
           )}
           <button
-            className="text-2xl focus:outline-none"
+            className="text-2xl focus:outline-none absolute z-10"
             onClick={toggleMenu}
             aria-label="Toggle Menu"
           >
@@ -79,8 +82,8 @@ const Navbar = () => {
           </button>
         </div>
         {showMenu && (
-          <div className="flex flex-col items-center justify-center h-screen">
-            <MainNav toggleMenu={toggleMenu} isMobile={isMobile} />
+          <div className="flex flex-col items-center justify-center">
+            <MainNav setShowMenu={setShowMenu} isMobile={isMobile} />
           </div>
         )}
       </nav>
@@ -95,7 +98,7 @@ const Navbar = () => {
             <div className="bg-gray-600 w-[1px]"></div>
           </div>
           <MainNav
-            toggleMenu={toggleMenu}
+            setShowMenu={setShowMenu}
             isMobile={isMobile}
             className="flex-1"
           />
