@@ -53,7 +53,7 @@ const Works = () => {
     <>
       <Navbar />
       <div className="h-screen p-4 md:px-40">
-        <div className="my-20 flex flex-col md:max-w-[1440px] mx-auto">
+        <div className="md:my-20 flex flex-col md:max-w-[1440px] mx-auto">
           <motion.div
             initial={{ x: "300%", opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
@@ -94,7 +94,7 @@ const Works = () => {
                       initial={{ y: "300%", opacity: 0 }}
                       animate={{ y: 0, opacity: 1 }}
                       transition={{ duration: 0.2 }}
-                      className=" h-fit bg-slate-600 hover:bg-slate-500 rounded-md transition-all ease-out"
+                      className="h-fit btn-primary"
                     >
                       <Link
                         href={project.codeLink}
@@ -109,7 +109,7 @@ const Works = () => {
                       initial={{ y: "300%", opacity: 0 }}
                       animate={{ y: 0, opacity: 1 }}
                       transition={{ duration: 0.2 }}
-                      className=" h-fit border border-slate-400 hover:border-slate-500 hover:bg-slate-500 rounded-md transition-all ease-out"
+                      className="h-fit border btn-secondary"
                     >
                       <Link
                         href={project.demoLink}

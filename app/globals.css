@@ -49,6 +49,12 @@ body {
 }
 
 @layer components {
+  .btn-primary {
+    @apply bg-slate-600 hover:bg-slate-500 rounded-md transition-all ease-out;
+  }
+  .btn-secondary {
+    @apply border border-slate-400 hover:border-slate-500 hover:bg-slate-500 rounded-md transition-all ease-out;
+  }
   .primary-btn-border {
     @apply rounded-md flex bg-gradient-to-r from-[#272932] to-[#42444F] p-[1px]  transition  ease-in duration-300 btn-shadow;
   }
@@ -60,4 +66,23 @@ body {
 .carousel .control-dots li {
   width: 15px !important;
   height: 15px !important;
+}
+
+.tooltip {
+  cursor: pointer;
+  position: relative;
+}
+
+.tooltip::after {
+  content: attr(data-tip);
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  font-size: 0.75rem;
+  border-radius: 4px;
+  white-space: nowrap;
 }

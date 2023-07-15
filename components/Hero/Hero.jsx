@@ -4,12 +4,14 @@ import { motion } from "framer-motion";
 import { PERSONAL_INFO } from "@/data/personal";
 import Link from "next/link";
 import { Navbar } from "@/components";
+import { BiSolidContact } from "react-icons/bi";
+import { AiOutlineCodepen } from "react-icons/ai";
 
 const Hero = () => {
   return (
     <>
       <Navbar />
-      <div className="flex hero h-screen items-center">
+      <div className="flex hero h-screen -mt-10 md:-mt-0 items-center">
         <div className="flex items-center flex-col md:justify-center px-4 gap-10 mx-auto">
           <motion.div
             initial={{ opacity: 0, scale: 0 }}
@@ -46,27 +48,35 @@ const Hero = () => {
             >
               {PERSONAL_INFO.description}
             </motion.p>
-            <div className="w-full max-w-[600px] mx-auto flex flex-col lg:flex-row gap-4 md:gap-8">
-              <Link href={"/work"} className="w-full">
-                <motion.button
-                  initial={{ y: "300%", opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{ duration: 0.2 }}
-                  className="w-full h-fit primary-btn-border"
+            <div className="flex items-center justify-center mx-auto w-full max-w-[600px] gap-5 mt-5 md:my-10">
+              <button
+                initial={{ y: "300%", opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.2 }}
+                className="h-fit btn-primary w-full"
+              >
+                <Link
+                  href={"/work"}
+                  className="flex items-center justify-center gap-3 h-fit py-2 md:py-4 px-8"
                 >
-                  <span className="w-full h-fit primary-btn-bg">My Work</span>
-                </motion.button>
-              </Link>
-              <Link href={"/contact"} className="w-full">
-                <motion.button
-                  initial={{ y: "300%", opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{ duration: 0.2 }}
-                  className="w-full h-fit primary-btn-border"
+                  <span>Projects</span>
+                  <AiOutlineCodepen size={28} />
+                </Link>
+              </button>
+              <button
+                initial={{ y: "300%", opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.2 }}
+                className="h-fit border btn-secondary w-full"
+              >
+                <Link
+                  href={"/contact"}
+                  className="flex items-center justify-center gap-3 h-fit py-2 md:py-4 px-8"
                 >
-                  <span className="w-full h-fit primary-btn-bg">Contact</span>
-                </motion.button>
-              </Link>
+                  <span>Contact</span>
+                  <BiSolidContact size={24} />
+                </Link>
+              </button>
             </div>
           </div>
         </div>

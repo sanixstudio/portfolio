@@ -21,7 +21,7 @@ const About = () => {
     <>
       <Navbar />
       <div className="h-screen p-4 md:px-40">
-        <div className="my-20 pb-40 flex flex-col md:max-w-[1440px] mx-auto">
+        <div className="md:my-20 pb-20 md:pb-40 flex flex-col md:max-w-[1440px] mx-auto">
           <motion.div
             initial={{ x: "-300%", opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
