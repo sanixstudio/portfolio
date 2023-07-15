@@ -12,7 +12,9 @@ const NavLink = ({ title, href, setShowMenu }) => {
       <Link href={href}>
         <button
           onClick={() => setShowMenu(false)}
-          className={`text-${active ? "gray-300 font-bold" : "gray-500"}`}
+          className={`text-${
+            active ? "text-gray-300 font-bold" : "text-gray-500 font-thin"
+          }`}
         >
           {title}
         </button>
