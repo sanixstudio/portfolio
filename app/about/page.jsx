@@ -14,6 +14,7 @@ import {
   BiLogoMongodb,
   BiLogoGraphql,
 } from "react-icons/bi";
+import { Footer } from "@/components";
 
 const About = () => {
   return (
@@ -171,6 +172,7 @@ const About = () => {
           </div>
         </motion.div>
       </div>
+      <Footer />
     </div>
   );
 };
