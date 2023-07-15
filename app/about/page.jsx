@@ -29,7 +29,7 @@ const About = () => {
           <h1 className="text-4xl md:text-6xl font-bold uppercase">About</h1>
           <span>Me</span>
         </motion.div>
-        <div className="flex flex-col lg:flex-row w-full justify-center items-center h-full md:gap-10 xl:gap-20  2xl:gap-40">
+        <div className="flex flex-col lg:flex-row w-full justify-center items-center h-full md:gap-10 xl:gap-20 2xl:gap-40">
           <motion.div
             initial={{ x: "-300%", opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
