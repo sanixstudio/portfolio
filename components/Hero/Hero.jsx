@@ -10,7 +10,7 @@ const Hero = () => {
     <>
       <Navbar />
       <div className="flex hero h-screen items-center">
-        <div className="flex items-center flex-col md:justify-center px-4 gap-10">
+        <div className="flex items-center flex-col md:justify-center px-4 gap-10 mx-auto">
           <motion.div
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: [2, 1] }}

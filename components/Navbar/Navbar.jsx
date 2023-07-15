@@ -67,7 +67,7 @@ const Navbar = () => {
   return (
     <header>
       <nav
-        className={`fixed inset-0 z-50 text-white ${
+        className={`${isMobile && "z-10"}fixed inset-0 text-white ${
           isMobile ? "w-full" : "max-w-[100px]"
         }`}
       >

@@ -33,8 +33,9 @@ const Works = () => {
       description:
         "ExploreMap: Mark and remember your visited places with titles, descriptions, ratings, and photos on an interactive map. Visualize your travels, relive memories, and share your journey with friends. Create a personalized travel log with this intuitive maps and tracker app.",
       techStack: ["JavaScript", "TailwindCSS"],
-      demoLink: "https://infomovia3-0.vercel.app/",
-      codeLink: "https://github.com/sanixstudio/infomovia3.0.git",
+      //TODO: add proper link for demo
+      demoLink: "https://github.com/sanixstudio/travel-tracker-vite.git",
+      codeLink: "https://github.com/sanixstudio/travel-tracker-vite.git",
       imageSrc: "/images/travel.png",
     },
     {
@@ -42,8 +43,8 @@ const Works = () => {
       description:
         "Discover diverse beers with ABV and IBU levels. Apply filters for Beer Alcohol and Hoppiness. Unleash your inner beer connoisseur with a simple, customizable beer app.",
       techStack: ["HTML", "CSS", "JavaScript", "fetch"],
-      demoLink: "https://infomovia3-0.vercel.app/",
-      codeLink: "https://github.com/sanixstudio/infomovia3.0.git",
+      demoLink: "https://sanixstudio.github.io/beerApp/",
+      codeLink: "https://github.com/sanixstudio/beerApp.git",
       imageSrc: "/images/beer.png",
     },
   ];
