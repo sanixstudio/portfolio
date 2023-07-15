@@ -6,7 +6,7 @@ import { v1 as uuidv1 } from "uuid";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Footer } from "@/components";
+import { Footer, Navbar } from "@/components";
 
 const Works = () => {
   const projects = [
@@ -49,89 +49,94 @@ const Works = () => {
   ];
 
   return (
-    <div className="h-screen p-4 md:px-40">
-      <div className="my-20 flex flex-col md:max-w-[1440px] mx-auto">
-        <motion.div
-          initial={{ x: "300%", opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.2 }}
-        >
-          <h1 className="text-4xl md:text-6xl font-bold uppercase">Work</h1>
-          <span>Latest Projects</span>
-        </motion.div>
-        <motion.div
-          initial={{ x: "-300%", opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.5 }}
-          className="mt-20"
-        >
-          {projects.map((project) => (
-            <div
-              key={uuidv1()}
-              className="flex flex-col lg:flex-row items-center justify-between gap-20 text-left min-h-[480px] bg-gradient-to-r from-slate-700 to-slate-900 mb-40 max-w-[900px] mx-auto rounded-md"
-            >
-              <div className="lg:self-start p-10 pb-0 flex-2">
-                <h3 className="text-3xl uppercase font-bold">{project.title}</h3>
-                <p className="my-8">{project.description}</p>
-                <h3 className="text-xl font-bold">Tech Used:</h3>
-                <div className="mt-5 flex gap-2 flex-wrap">
-                  {project.techStack.map((tech) => (
-                    <span
-                      key={uuidv1()}
-                      className="text-xs p-2 bg-slate-700 border border-slate-600 rounded-sm"
+    <>
+      <Navbar />
+      <div className="h-screen p-4 md:px-40">
+        <div className="my-20 flex flex-col md:max-w-[1440px] mx-auto">
+          <motion.div
+            initial={{ x: "300%", opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.2 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold uppercase">Work</h1>
+            <span>Latest Projects</span>
+          </motion.div>
+          <motion.div
+            initial={{ x: "-300%", opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            className="mt-20"
+          >
+            {projects.map((project) => (
+              <div
+                key={uuidv1()}
+                className="flex flex-col lg:flex-row items-center justify-between gap-20 text-left min-h-[480px] bg-gradient-to-r from-slate-700 to-slate-900 mb-40 max-w-[900px] mx-auto rounded-md"
+              >
+                <div className="lg:self-start p-10 pb-0 flex-2">
+                  <h3 className="text-3xl uppercase font-bold">
+                    {project.title}
+                  </h3>
+                  <p className="my-8">{project.description}</p>
+                  <h3 className="text-xl font-bold">Tech Used:</h3>
+                  <div className="mt-5 flex gap-2 flex-wrap">
+                    {project.techStack.map((tech) => (
+                      <span
+                        key={uuidv1()}
+                        className="text-xs p-2 bg-slate-700 border border-slate-600 rounded-sm"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="flex justify-center lg:justify-normal gap-5 my-10">
+                    <button
+                      initial={{ y: "300%", opacity: 0 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      transition={{ duration: 0.2 }}
+                      className=" h-fit bg-slate-600 hover:bg-slate-500 rounded-md transition-all ease-out"
                     >
-                      {tech}
-                    </span>
-                  ))}
+                      <Link
+                        href={project.codeLink}
+                        target="_blank"
+                        className="flex items-center gap-3 h-fit py-2 px-8"
+                      >
+                        <span>Code</span>
+                        <FiCode size={22} />
+                      </Link>
+                    </button>
+                    <button
+                      initial={{ y: "300%", opacity: 0 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      transition={{ duration: 0.2 }}
+                      className=" h-fit border border-slate-400 hover:border-slate-500 hover:bg-slate-500 rounded-md transition-all ease-out"
+                    >
+                      <Link
+                        href={project.demoLink}
+                        target="_blank"
+                        className="flex items-center gap-3 h-fit py-2 px-8"
+                      >
+                        <span>Demo</span>
+                        <HiCursorClick size={22} />
+                      </Link>
+                    </button>
+                  </div>
                 </div>
-                <div className="flex justify-center lg:justify-normal gap-5 my-10">
-                  <button
-                    initial={{ y: "300%", opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 0.2 }}
-                    className=" h-fit bg-slate-600 hover:bg-slate-500 rounded-md transition-all ease-out"
-                  >
-                    <Link
-                      href={project.codeLink}
-                      target="_blank"
-                      className="flex items-center gap-3 h-fit py-2 px-8"
-                    >
-                      <span>Code</span>
-                      <FiCode size={22} />
-                    </Link>
-                  </button>
-                  <button
-                    initial={{ y: "300%", opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 0.2 }}
-                    className=" h-fit border border-slate-400 hover:border-slate-500 hover:bg-slate-500 rounded-md transition-all ease-out"
-                  >
-                    <Link
-                      href={project.demoLink}
-                      target="_blank"
-                      className="flex items-center gap-3 h-fit py-2 px-8"
-                    >
-                      <span>Demo</span>
-                      <HiCursorClick size={22} />
-                    </Link>
-                  </button>
+                <div className="flex justify-end pr-10 pb-10">
+                  <Image
+                    width={200}
+                    height={200}
+                    src={project.imageSrc}
+                    alt={project.title}
+                    className="max-w-sm"
+                  />
                 </div>
               </div>
-              <div className="flex justify-end pr-10 pb-10">
-                <Image
-                  width={200}
-                  height={200}
-                  src={project.imageSrc}
-                  alt={project.title}
-                  className="max-w-sm"
-                />
-              </div>
-            </div>
-          ))}
-        </motion.div>
+            ))}
+          </motion.div>
+        </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
+    </>
   );
 };
 
