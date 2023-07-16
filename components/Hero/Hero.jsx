@@ -49,7 +49,7 @@ const Hero = () => {
               {PERSONAL_INFO.description}
             </motion.p>
             <div className="flex items-center justify-center mx-auto w-full max-w-[600px] gap-5 mt-5 md:my-10">
-              <button
+              <motion.button
                 initial={{ y: "300%", opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.2 }}
@@ -62,8 +62,8 @@ const Hero = () => {
                   <span>Projects</span>
                   <AiOutlineCodepen size={28} />
                 </Link>
-              </button>
-              <button
+              </motion.button>
+              <motion.button
                 initial={{ y: "300%", opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.2 }}
@@ -76,7 +76,7 @@ const Hero = () => {
                   <span>Contact</span>
                   <BiSolidContact size={24} />
                 </Link>
-              </button>
+              </motion.button>
             </div>
           </div>
         </div>
