@@ -113,7 +113,7 @@ const Contact = () => {
 
               <label
                 className="uppercase tracking-wider"
-                htmlFor="your@email.com"
+                htmlFor="email"
               >
                 Email:
               </label>

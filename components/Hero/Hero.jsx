@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Navbar } from "@/components";
 import { BiSolidContact } from "react-icons/bi";
 import { AiOutlineCodepen } from "react-icons/ai";
+import Balancer from "react-wrap-balancer";
 
 const Hero = () => {
   return (
@@ -44,9 +45,9 @@ const Hero = () => {
               initial={{ x: "-100%", opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.5 }}
-              className="leading-6 md:text-xl text-center"
+              className="leading-6 md:text-xl text-center max-w-7xl"
             >
-              {PERSONAL_INFO.description}
+              <Balancer>{PERSONAL_INFO.description}</Balancer>
             </motion.p>
             <div className="flex items-center justify-center mx-auto w-full max-w-[600px] gap-5 mt-5 md:my-10">
               <motion.button
