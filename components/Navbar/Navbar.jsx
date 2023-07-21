@@ -29,7 +29,7 @@ const MainNav = ({ isMobile, setShowMenu }) => {
       className={`flex flex-col gap-5 ${
         isMobile
           ? "fixed top-0 left-0 w-full h-screen md:-mt-20 z-10 p-10 bg-slate-900 justify-center items-center text-2xl"
-          : "h-screen justify-center -mt-10 text-center"
+          : "h-screen -ml-14 before:border before:border-slate-400 after:border after:border-slate-400 justify-center -mt-10 text-center left-0"
       }`}
     >
       <NavLink setShowMenu={setShowMenu} title="Home" href="/" />
@@ -99,17 +99,13 @@ const Navbar = () => {
               <span className="text-4xl whitespace-nowrap">AN</span>
             </Link>
           )}
-          <div className="flex-1 max-h-[40%] flex justify-center">
+          {/* <div className="flex-1 max-h-[40%] flex justify-center">
             <div className="bg-gray-600 w-[1px]"></div>
-          </div>
-          <MainNav
-            setShowMenu={setShowMenu}
-            isMobile={isMobile}
-            className="flex-1"
-          />
-          <div className="flex-1 max-h-[40%] flex justify-center">
+          </div> */}
+          <MainNav setShowMenu={setShowMenu} isMobile={isMobile} />
+          {/* <div className="flex-1 max-h-[40%] flex justify-center">
             <div className="bg-gray-600 w-[1px]"></div>
-          </div>
+          </div> */}
         </div>
       </nav>
     </header>
