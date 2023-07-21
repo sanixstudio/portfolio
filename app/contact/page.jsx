@@ -94,7 +94,7 @@ const Contact = () => {
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.6 }}
               onSubmit={handleSubmit}
-              className="flex flex-1 flex-col gap-2 max-w-[560px]"
+              className="flex flex-1 flex-col gap-2 max-w-[560px] mx-auto w-full"
               ref={formRef}
             >
               <label className="uppercase tracking-wider" htmlFor="name">

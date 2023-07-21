@@ -28,7 +28,7 @@ const MainNav = ({ isMobile, setShowMenu }) => {
     <ul
       className={`flex flex-col gap-5 ${
         isMobile
-          ? "w-full h-screen -mt-20 p-10 bg-slate-900 justify-center items-center text-2xl"
+          ? "fixed top-0 left-0 w-full h-screen md:-mt-20 z-10 p-10 bg-slate-900 justify-center items-center text-2xl"
           : "text-center"
       }`}
     >
@@ -74,7 +74,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16 px-4 md:hidden relative">
           {!isMobile && (
             <Link href="/">
-              <span className="text-4xl whitespace-nowrap">AN</span>
+              <span className="text-4xl hidden md:flex whitespace-nowrap">AN</span>
             </Link>
           )}
           <button
@@ -92,7 +92,7 @@ const Navbar = () => {
         )}
       </nav>
       <nav className="hidden md:flex fixed h-full z-50">
-        <div className="flex flex-col flex-wrap items-between justify-between h-full mx-auto p-4">
+        <div className="hidden md:flex flex-col flex-wrap items-between justify-between h-full mx-auto p-4">
           {!isMobile && (
             <Link href="/">
               <span className="text-4xl whitespace-nowrap">AN</span>
