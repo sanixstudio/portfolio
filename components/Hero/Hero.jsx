@@ -45,7 +45,7 @@ const Hero = () => {
               initial={{ x: "-100%", opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.5 }}
-              className="leading-6 md:text-xl text-center max-w-7xl"
+              className="leading-6 md:text-xl mx-auto text-center max-w-7xl"
             >
               <Balancer>{PERSONAL_INFO.description}</Balancer>
             </motion.p>

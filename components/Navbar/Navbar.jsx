@@ -29,7 +29,7 @@ const MainNav = ({ isMobile, setShowMenu }) => {
       className={`flex flex-col gap-5 ${
         isMobile
           ? "fixed top-0 left-0 w-full h-screen md:-mt-20 z-10 p-10 bg-slate-900 justify-center items-center text-2xl"
-          : "text-center"
+          : "h-screen justify-center -mt-10 text-center"
       }`}
     >
       <NavLink setShowMenu={setShowMenu} title="Home" href="/" />
@@ -67,18 +67,19 @@ const Navbar = () => {
   return (
     <header>
       <nav
-        className={`${isMobile && "z-10"}fixed inset-0 text-white ${
-          isMobile ? "w-full" : "max-w-[100px]"
+        className={`${isMobile && "z-10"}fixed inset-0 text-white w-full
         }`}
       >
         <div className="flex justify-between items-center h-16 px-4 md:hidden relative">
           {!isMobile && (
             <Link href="/">
-              <span className="text-4xl hidden md:flex whitespace-nowrap">AN</span>
+              <span className="text-4xl hidden md:flex whitespace-nowrap">
+                AN
+              </span>
             </Link>
           )}
           <button
-            className="text-2xl focus:outline-none absolute z-10"
+            className="text-2xl focus:outline-none absolute z-20"
             onClick={toggleMenu}
             aria-label="Toggle Menu"
           >
@@ -86,7 +87,7 @@ const Navbar = () => {
           </button>
         </div>
         {showMenu && (
-          <div className="flex flex-col items-center justify-center">
+          <div className="fixed top-0 left-0 w-full h-screen md:-mt-20 z-10 p-10 bg-slate-900 text-2xl">
             <MainNav setShowMenu={setShowMenu} isMobile={isMobile} />
           </div>
         )}
