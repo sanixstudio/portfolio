@@ -49,12 +49,17 @@ const Contact = () => {
       <ToastContainer />
       <div className="h-screen p-4 md:px-40">
         <div className="my-20 mb-0 md:mb-40 pb-40 flex flex-col md:max-w-[1440px] mx-auto">
-          <div className="mb-20">
+          <motion.div
+            initial={{ x: "300%", opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.2 }}
+            className="mb-20"
+          >
             <h1 className="text-4xl md:text-6xl font-bold uppercase">
               Contact
             </h1>
             <span>Get In Touch</span>
-          </div>
+          </motion.div>
           <div className="flex flex-col gap-20 lg:gap-0 lg:flex-row w-full max-w-[900px] mx-auto">
             <motion.div
               initial={{ x: "300%", opacity: 0 }}
@@ -111,10 +116,7 @@ const Contact = () => {
                 className="w-full bg-transparent outline-none focus:bg-slate-900 px-4 py-3 border border-slate-600 mb-3 rounded-md "
               />
 
-              <label
-                className="uppercase tracking-wider"
-                htmlFor="email"
-              >
+              <label className="uppercase tracking-wider" htmlFor="email">
                 Email:
               </label>
               <input

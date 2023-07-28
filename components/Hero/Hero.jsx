@@ -12,7 +12,7 @@ const Hero = () => {
   return (
     <>
       <Navbar />
-      <div className="flex hero h-screen -mt-10 md:-mt-0 items-center">
+      <div className="flex hero h-screen md:-mt-0 items-center">
         <div className="flex w-full items-center flex-col md:justify-center px-4 gap-10 mx-auto">
           <motion.div
             initial={{ opacity: 0, scale: 0 }}

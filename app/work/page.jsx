@@ -52,7 +52,7 @@ const Works = () => {
   return (
     <>
       <Navbar />
-      <div className="h-screen p-4 md:px-40">
+      <div className="pt-20 md:pt-0 h-screen p-4 md:px-40">
         <div className="md:my-20 flex flex-col md:max-w-[1440px] mx-auto">
           <motion.div
             initial={{ x: "300%", opacity: 0 }}
