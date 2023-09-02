@@ -6,7 +6,7 @@ export const PERSONAL_INFO = {
   linkedIn: "https://github.com/sanixstudio",
   title: "Frontend Developer",
   location: "San Francisco, CA",
-  tagline: "Frontend Software Engineer",
+  tagline: "Software Engineer (Full Stack)",
   description:
     "I create innovative front-end solutions and user experiences using data-driven strategies to help startups achieve their goals and captivate their audience. Let's work together to bring your digital vision to life!",
 };

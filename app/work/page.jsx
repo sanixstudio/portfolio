@@ -57,7 +57,8 @@ const Works = () => {
           <motion.div
             initial={{ x: "300%", opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.2 }}
+            transition={{ duration: 0.7 }}
+            className="-z-10"
           >
             <h1 className="text-4xl md:text-6xl font-bold uppercase">Work</h1>
             <span>Latest Projects</span>
@@ -65,8 +66,8 @@ const Works = () => {
           <motion.div
             initial={{ x: "-300%", opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.5 }}
-            className="mt-20"
+            transition={{ duration: 0.7 }}
+            className="mt-20 -z-10"
           >
             {projects.map((project) => (
               <div
@@ -93,7 +94,7 @@ const Works = () => {
                     <button
                       initial={{ y: "300%", opacity: 0 }}
                       animate={{ y: 0, opacity: 1 }}
-                      transition={{ duration: 0.2 }}
+                      transition={{ duration: 0.7 }}
                       className="h-fit btn-primary"
                     >
                       <Link
@@ -108,7 +109,7 @@ const Works = () => {
                     <button
                       initial={{ y: "300%", opacity: 0 }}
                       animate={{ y: 0, opacity: 1 }}
-                      transition={{ duration: 0.2 }}
+                      transition={{ duration: 0.7 }}
                       className="h-fit border btn-secondary"
                     >
                       <Link

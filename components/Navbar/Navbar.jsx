@@ -1,187 +1,82 @@
-import React, { useState, useEffect } from "react";
-import { usePathname } from "next/navigation";
-import { BiMenuAltLeft } from "react-icons/bi";
+"use client";
+import { useState } from "react";
+import { Button } from "flowbite-react";
 import Link from "next/link";
-
-const NavLink = ({ title, href, setShowMenu }) => {
-  const pathname = usePathname();
-  const active = pathname === href;
-
-  return (
-    <li>
-      <Link href={href}>
-        <button
-          onClick={() => setShowMenu(false)}
-          className={`text-${
-            active ? "text-gray-300 font-bold" : "text-gray-500 font-thin"
-          }`}
-        >
-          {title}
-        </button>
-      </Link>
-    </li>
-  );
-};
-
-const MainNav = ({ isMobile, setShowMenu }) => {
-  return (
-    <ul
-      className={`flex flex-col gap-5 ${
-        isMobile
-          ? "fixed top-0 left-0 w-full h-screen md:-mt-20 z-10 p-10 bg-slate-900 justify-center items-center text-2xl"
-          : "h-screen -ml-14 before:border before:border-slate-400 after:border after:border-slate-400 justify-center -mt-10 text-center left-0"
-      }`}
-    >
-      <NavLink setShowMenu={setShowMenu} title="Home" href="/" />
-      <NavLink setShowMenu={setShowMenu} title="About" href="/about" />
-      <NavLink setShowMenu={setShowMenu} title="Work" href="/work" />
-      <NavLink setShowMenu={setShowMenu} title="Contact" href="/contact" />
-    </ul>
-  );
-};
+import { IoMdClose } from "react-icons/io";
+import { HiMenuAlt2 } from "react-icons/hi";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
-  const [showMenu, setShowMenu] = useState(false);
-  const [isMobile, setIsMobile] = useState(
-    typeof window !== "undefined" && window.innerWidth < 768
-  );
+  const [isOpen, setIsOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setShowMenu((prevState) => !prevState);
+  const mobileMenuVariants = {
+    open: {
+      x: 0,
+      transition: {
+        duration: 0.4,
+      },
+    },
+    closed: {
+      x: "-300%",
+      transition: {
+        duration: 0.4,
+      },
+    },
   };
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-      if (window.innerWidth >= 768) {
-        setShowMenu(false);
-      }
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
   return (
-    <header>
-      <nav
-        className={`${isMobile && "z-10"}fixed inset-0 text-white w-full
-        }`}
+    <motion.div
+      initial={{ y: "-100%" }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="max-w-[1440px] relative mx-auto px-4 h-[80px] flex justify-between items-center"
+    >
+      <Link href={"/"}>
+        <h1 className="md:hidden text-4xl font-bold">AN</h1>
+        <h1 className="hidden md:block text-4xl font-bold">ADNAN-N</h1>
+      </Link>
+      <nav className="hidden lex-1 md:flex md:justify-end md:gap-8">
+        <Link href={"/"}>Home</Link>
+        <Link href={"/about"}>About</Link>
+        <Link href={"/work"}>Projects</Link>
+        <Link href={"/contact"}>Contact</Link>
+      </nav>
+      {/* Mobile Menu */}
+      <motion.nav
+        variants={mobileMenuVariants}
+        initial="closed"
+        animate={isOpen ? "open" : "closed"}
+        className={`absolute w-full z-10 md:hidden h-screen -ml-4 backdrop-blur-md top-0 flex justify-start md:gap-8`}
       >
-        <div className="flex justify-between items-center h-16 px-4 md:hidden relative">
-          {!isMobile && (
-            <Link href="/">
-              <span className="text-4xl hidden md:flex whitespace-nowrap">
-                AN
-              </span>
-            </Link>
-          )}
-          <button
-            className="text-2xl focus:outline-none absolute z-20"
-            onClick={toggleMenu}
-            aria-label="Toggle Menu"
+        <div className="relative w-2/3 flex flex-col justify-center bg-slate-800 items-center gap-10 uppercase">
+          <Button
+            className="absolute top-5 left-5 rounded-md border-gray-600 hover:bg-gray-600 transition-all"
+            onClick={() => setIsOpen(false)}
           >
-            <BiMenuAltLeft size={32} />
-          </button>
+            <IoMdClose size={26} />
+          </Button>
+          <Link className="uppercase font-bold text-2xl" href={"/"}>
+            Home
+          </Link>
+          <Link className="uppercase font-bold text-2xl" href={"/about"}>
+            About
+          </Link>
+          <Link className="uppercase font-bold text-2xl" href={"/work"}>
+            Projects
+          </Link>
+          <Link className="uppercase font-bold text-2xl" href={"/contact"}>
+            Contact
+          </Link>
         </div>
-        {showMenu && (
-          <div className="fixed top-0 left-0 w-full h-screen md:-mt-20 z-10 p-10 bg-slate-900 text-2xl">
-            <MainNav setShowMenu={setShowMenu} isMobile={isMobile} />
-          </div>
-        )}
-      </nav>
-      <nav className="hidden md:flex fixed h-full z-50">
-        <div className="hidden md:flex flex-col flex-wrap items-between justify-between h-full mx-auto p-4">
-          {!isMobile && (
-            <Link href="/">
-              <span className="text-4xl whitespace-nowrap">AN</span>
-            </Link>
-          )}
-          <MainNav setShowMenu={setShowMenu} isMobile={isMobile} />
-        </div>
-      </nav>
-    </header>
+      </motion.nav>
+      <Button
+        className="md:hidden rounded-md border-gray-600 hover:bg-gray-600"
+        onClick={() => setIsOpen(!isOpen)} // Toggle isOpen
+      >
+        <HiMenuAlt2 size={26} />
+      </Button>
+    </motion.div>
   );
 };
 
 export default Navbar;
-
-// import { Button } from "flowbite-react";
-// import Link from "next/link";
-// import { AiOutlineHome } from "react-icons/ai";
-// import { BiSolidContact } from "react-icons/bi";
-// import { IoMdClose } from "react-icons/io";
-// import { BsFillPersonFill, BsGearWideConnected } from "react-icons/bs";
-// import { HiMenuAlt2 } from "react-icons/hi";
-// import { useState } from "react";
-
-// const Navbar = () => {
-//   const [open, setIsOpen] = useState(false);
-
-//   return (
-//     <>
-//       <div className="md:hidden absolute right-0 z-10">
-//         <Button
-//           onClick={() => setIsOpen(true)}
-//           className={`${!open ? "block" : "hidden"} md:hidden border-0`}
-//         >
-//           <HiMenuAlt2 size={28} />
-//         </Button>
-//         <Button
-//           onClick={() => setIsOpen(false)}
-//           className={`${open ? "block" : "hidden"} md:hidden border-0`}
-//         >
-//           <IoMdClose size={28} />
-//         </Button>
-//       </div>
-//       <div
-//         className={`${
-//           open ? "block" : "hidden"
-//         } md:hidden z-10 w-full h-screen flex-grow flex flex-col justify-center items-center gap-10`}
-//       >
-//         <Link href="/" className="flex gap-5 items-center w-[150px]">
-//           <AiOutlineHome size={24} />
-//           <span className="text-xl sm:text-2xl">Home</span>
-//         </Link>
-//         <Link href="/about" className="flex gap-5 items-center w-[150px]">
-//           <BsFillPersonFill size={24} />
-//           <span className="text-xl sm:text-2xl">About</span>
-//         </Link>
-//         <Link href="/work" className="flex gap-5 items-center w-[150px]">
-//           <BsGearWideConnected size={24} />
-//           <span className="text-xl sm:text-2xl">Work</span>
-//         </Link>
-//         <Link href="contact" className="flex gap-5 items-center w-[150px]">
-//           <BiSolidContact size={24} />
-//           <span className="text-xl sm:text-2xl">Contact</span>
-//         </Link>
-//       </div>
-//       <div className="hidden fixed h-screen w-20 py-2 md:flex flex-col items-center">
-//         <Link
-//           href="/"
-//           className="bg-slate-900 w-[60px] h-[60px] mt-3 -mb-3 flex justify-center items-center rounded-full border border-slate-600 hover:border-slate-300 ease-in transition-all"
-//         >
-//           <h1 className="text-3xl">AN</h1>
-//         </Link>
-//         <div className="flex-1 flex flex-col gap-8 items-center justify-center">
-//           <Link href="/">
-//             <AiOutlineHome size={24} />
-//           </Link>
-//           <Link href="/about">
-//             <BsFillPersonFill size={24} />
-//           </Link>
-//           <Link href="/work">
-//             <BsGearWideConnected size={24} />
-//           </Link>
-//           <Link href="contact">
-//             <BiSolidContact size={24} />
-//           </Link>
-//         </div>
-//       </div>
-//     </>
-//   );
-// };
-
-// export default Navbar;

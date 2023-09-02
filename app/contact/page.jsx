@@ -47,13 +47,13 @@ const Contact = () => {
     <>
       <Navbar />
       <ToastContainer />
-      <div className="h-screen p-4 md:px-40">
-        <div className="my-20 mb-0 md:mb-40 pb-40 flex flex-col md:max-w-[1440px] mx-auto">
+      <div className="pt-20 md:pt-0 p-4 md:px-40 mb-24">
+        <div className="md:my-20 pb-20 flex flex-col md:max-w-[1440px] mx-auto">
           <motion.div
             initial={{ x: "300%", opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.2 }}
-            className="mb-20"
+            transition={{ duration: 0.7 }}
+            className="mb-20 -z-10"
           >
             <h1 className="text-4xl md:text-6xl font-bold uppercase">
               Contact
@@ -64,8 +64,8 @@ const Contact = () => {
             <motion.div
               initial={{ x: "300%", opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.6 }}
-              className="flex-1 flex flex-col gap-4 lg:order-2 mx-auto md:ml-20 mt-10"
+              transition={{ duration: 0.7 }}
+              className="-z-10 flex-1 flex flex-col gap-4 lg:order-2 mx-auto md:ml-20 mt-10"
             >
               {/* <div className="flex gap-10">
                 <BsFillTelephoneFill size={24} />
@@ -97,9 +97,9 @@ const Contact = () => {
             <motion.form
               initial={{ x: "-300%", opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.7 }}
               onSubmit={handleSubmit}
-              className="flex flex-1 flex-col gap-2 max-w-[560px] mx-auto w-full"
+              className="-z-10 flex flex-1 flex-col gap-2 max-w-[560px] mx-auto w-full"
               ref={formRef}
             >
               <label className="uppercase tracking-wider" htmlFor="name">
@@ -150,8 +150,8 @@ const Contact = () => {
             </motion.form>
           </div>
         </div>
-        <Footer />
       </div>
+      <Footer />
     </>
   );
 };

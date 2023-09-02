@@ -25,17 +25,17 @@ const About = () => {
           <motion.div
             initial={{ x: "-300%", opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.6 }}
-            className="mb-20"
+            transition={{ duration: 0.7 }}
+            className="mb-20 -z-10"
           >
             <h1 className="text-4xl md:text-6xl font-bold uppercase">About</h1>
             <span>Me</span>
           </motion.div>
-          <div className="flex flex-col lg:flex-row w-full justify-center items-center h-full md:gap-10 xl:gap-20 2xl:gap-40">
+          <div className="-z-10 flex flex-col lg:flex-row w-full justify-center items-center h-full md:gap-10 xl:gap-20 2xl:gap-40">
             <motion.div
               initial={{ x: "-300%", opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.7 }}
               className="flex-3 md:w-full self-start p-10 bg-gradient-to-t from-[#42444F] to-[#272932] max-w-[420px] mx-auto"
             >
               <Image
@@ -49,7 +49,7 @@ const About = () => {
             <motion.div
               initial={{ x: "300%", opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.7 }}
               className="self-start w-full"
             >
               <h2 className="mt-28 md:mt-0 text-4xl mb-10 font-bold uppercase">
@@ -119,7 +119,7 @@ const About = () => {
           <motion.div
             initial={{ y: "-300%", opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.7 }}
             className="mt-40 md:mt-60"
           >
             <h2 className="text-4xl font-bold mb-5">

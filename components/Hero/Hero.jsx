@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -6,19 +7,19 @@ import Link from "next/link";
 import { Navbar } from "@/components";
 import { BiSolidContact } from "react-icons/bi";
 import { AiOutlineCodepen } from "react-icons/ai";
-import Balancer from "react-wrap-balancer";
 
 const Hero = () => {
   return (
     <>
       <Navbar />
-      <div className="flex hero h-screen md:-mt-0 items-center">
-        <div className="flex w-full items-center flex-col md:justify-center px-4 gap-10 mx-auto">
+      <div className="flex hero h-[calc(100vh-80px)] md:-mt-0 items-center">
+        <div className="-z-10 flex w-full items-center flex-col md:justify-center px-4 gap-10 mx-auto">
           <motion.div
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: [2, 1] }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
+            className=" rounded-full bg-white/70"
           >
             <Image
               width={160}
@@ -45,9 +46,10 @@ const Hero = () => {
               initial={{ x: "-100%", opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.5 }}
-              className="leading-6 md:text-xl mx-auto text-center max-w-7xl"
+              className="md:text-xl lead mx-auto text-center max-w-[890px]"
             >
-              <Balancer>{PERSONAL_INFO.description}</Balancer>
+              {/* <Balancer>{PERSONAL_INFO.description}</Balancer> */}
+              {PERSONAL_INFO.description}
             </motion.p>
             <div className="flex items-center justify-center mx-auto w-full max-w-[600px] gap-5 mt-5 md:my-10">
               <motion.button
