@@ -29,24 +29,24 @@ const Navbar = () => {
       initial={{ y: "-100%" }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className="max-w-[1440px] relative mx-auto px-4 h-[80px] flex justify-between items-center"
+      className="max-w-[1440px] z-20 relative mx-auto px-6 h-[80px] flex justify-between items-center"
     >
       <Link href={"/"}>
         <h1 className="md:hidden text-4xl font-bold">AN</h1>
         <h1 className="hidden md:block text-4xl font-bold">ADNAN-N</h1>
       </Link>
       <nav className="hidden lex-1 md:flex md:justify-end md:gap-8">
-        <Link href={"/"}>Home</Link>
-        <Link href={"/about"}>About</Link>
-        <Link href={"/work"}>Projects</Link>
-        <Link href={"/contact"}>Contact</Link>
+        <Link href={"/"}>HOME</Link>
+        <Link href={"/about"}>ABOUT</Link>
+        <Link href={"/work"}>PROJECTS</Link>
+        <Link href={"/contact"}>CONTACT</Link>
       </nav>
       {/* Mobile Menu */}
       <motion.nav
         variants={mobileMenuVariants}
         initial="closed"
         animate={isOpen ? "open" : "closed"}
-        className={`absolute w-full z-10 md:hidden h-screen -ml-4 backdrop-blur-md top-0 flex justify-start md:gap-8`}
+        className={`absolute w-full md:hidden h-screen -ml-4 backdrop-blur-md top-0 flex justify-start md:gap-8`}
       >
         <div className="relative w-2/3 flex flex-col justify-center bg-slate-800 items-center gap-10 uppercase">
           <Button

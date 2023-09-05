@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -13,20 +13,23 @@ const Hero = () => {
     <>
       <Navbar />
       <div className="flex hero h-[calc(100vh-80px)] md:-mt-0 items-center">
-        <div className="-z-10 flex w-full items-center flex-col md:justify-center px-4 gap-10 mx-auto">
+        <div className="flex w-full items-center flex-col md:justify-center px-4 gap-10 mx-auto">
           <motion.div
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: [2, 1] }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className=" rounded-full bg-white/70"
           >
-            <Image
-              width={160}
-              height={160}
-              src="/images/adi.png"
-              alt="adi logo"
-            />
+            <div className="border relative p-2 rounded-full">
+              <div className=" rounded-full bg-white/70">
+                <Image
+                  width={160}
+                  height={160}
+                  src="/images/adi.png"
+                  alt="adi logo"
+                />
+              </div>
+            </div>
           </motion.div>
           <div className="flex flex-col drop-shadow-glossyShadows items-center justify-center gap-10 sm:gap-20 lg:gap-20 text-center lg:items-start lg:text-left md:w-2/3">
             <motion.div
@@ -59,7 +62,7 @@ const Hero = () => {
                 className="h-fit btn-primary w-full"
               >
                 <Link
-                  href={"/work"}
+                href={'/work'}
                   className="flex items-center justify-center gap-3 h-fit py-2 md:py-4 px-8"
                 >
                   <span>Projects</span>

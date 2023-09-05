@@ -53,7 +53,7 @@ const Contact = () => {
             initial={{ x: "300%", opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.7 }}
-            className="mb-20 -z-10"
+            className="mb-20"
           >
             <h1 className="text-4xl md:text-6xl font-bold uppercase">
               Contact
@@ -65,7 +65,7 @@ const Contact = () => {
               initial={{ x: "300%", opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.7 }}
-              className="-z-10 flex-1 flex flex-col gap-4 lg:order-2 mx-auto md:ml-20 mt-10"
+              className="flex-1 flex flex-col gap-4 lg:order-2 mx-auto md:ml-20 mt-10"
             >
               {/* <div className="flex gap-10">
                 <BsFillTelephoneFill size={24} />
@@ -99,7 +99,7 @@ const Contact = () => {
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.7 }}
               onSubmit={handleSubmit}
-              className="-z-10 flex flex-1 flex-col gap-2 max-w-[560px] mx-auto w-full"
+              className="flex flex-1 flex-col gap-2 max-w-[560px] mx-auto w-full"
               ref={formRef}
             >
               <label className="uppercase tracking-wider" htmlFor="name">
