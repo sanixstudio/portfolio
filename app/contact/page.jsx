@@ -47,7 +47,7 @@ const Contact = () => {
     <>
       <Navbar />
       <ToastContainer />
-      <div className="pt-20 md:pt-0 p-4 md:px-40 mb-24">
+      <div className="pt-20 md:pt-0  h-[calc(100vh-400px)] p-4 md:px-40 mb-24">
         <div className="md:my-20 pb-20 flex flex-col md:max-w-[1440px] mx-auto">
           <motion.div
             initial={{ x: "300%", opacity: 0 }}
@@ -67,14 +67,6 @@ const Contact = () => {
               transition={{ duration: 0.7 }}
               className="flex-1 flex flex-col gap-4 lg:order-2 mx-auto md:ml-20 mt-10"
             >
-              {/* <div className="flex gap-10">
-                <BsFillTelephoneFill size={24} />
-                <h3 className="select-none">(415) 802 8751</h3>
-              </div>
-              <div className="flex gap-10">
-                <MdEmail size={24} />
-                <h3 className="select-none">sanixstudio@gmail.com</h3>
-              </div> */}
               <div className="flex gap-5">
                 <HiLocationMarker size={24} />
                 <h3 className="select-none">San Francisco, Bay Area</h3>
