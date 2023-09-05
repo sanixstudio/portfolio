@@ -47,7 +47,7 @@ const Contact = () => {
     <>
       <Navbar />
       <ToastContainer />
-      <div className="pt-20 md:pt-0  h-[calc(100vh-400px)] p-4 md:px-40 mb-24">
+      <div className="pt-20 md:pt-0 p-4 md:px-40 mb-24">
         <div className="md:my-20 pb-20 flex flex-col md:max-w-[1440px] mx-auto">
           <motion.div
             initial={{ x: "300%", opacity: 0 }}
