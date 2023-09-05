@@ -73,7 +73,7 @@ const Works = () => {
                 key={uuidv1()}
                 className="flex flex-col lg:flex-row items-center justify-between gap-20 text-left min-h-[480px] bg-gradient-to-r from-slate-700 to-slate-900 mb-40 max-w-[900px] mx-auto rounded-md"
               >
-                <div className="lg:self-start p-10 pb-0 flex-2">
+                <div className="order-2 lg:order-1 lg:self-start p-10 pb-0 flex-2">
                   <h3 className="text-3xl uppercase font-bold">
                     {project.title}
                   </h3>
@@ -122,13 +122,13 @@ const Works = () => {
                     </button>
                   </div>
                 </div>
-                <div className="flex justify-end pr-10 pb-10">
+                <div className="order-1 flex justify-end pr-10 pb-10">
                   <Image
                     width={200}
                     height={200}
                     src={project.imageSrc}
                     alt={project.title}
-                    className="max-w-sm"
+                    className="max-w-sm mt-10 lg:mt-0 -mb-20 lg:mb-0"
                   />
                 </div>
               </div>

@@ -21,6 +21,7 @@ const Hero = () => {
             transition={{ duration: 0.5 }}
           >
             <div className="border relative p-2 rounded-full">
+              <div className="theRing"></div>
               <div className=" rounded-full bg-white/70">
                 <Image
                   width={160}
@@ -62,7 +63,7 @@ const Hero = () => {
                 className="h-fit btn-primary w-full"
               >
                 <Link
-                href={'/work'}
+                  href={"/work"}
                   className="flex items-center justify-center gap-3 h-fit py-2 md:py-4 px-8"
                 >
                   <span>Projects</span>

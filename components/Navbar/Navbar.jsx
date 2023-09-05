@@ -46,15 +46,15 @@ const Navbar = () => {
         variants={mobileMenuVariants}
         initial="closed"
         animate={isOpen ? "open" : "closed"}
-        className={`absolute w-full md:hidden h-screen -ml-4 backdrop-blur-md top-0 flex justify-start md:gap-8`}
+        className={`absolute left-0 top-0 w-full md:hidden h-screen -ml-4 backdrop-blur-md flex justify-start md:gap-8`}
       >
         <div className="relative w-2/3 flex flex-col justify-center bg-slate-800 items-center gap-10 uppercase">
-          <Button
+          {/* <Button
             className="absolute top-5 left-5 rounded-md border-gray-600 hover:bg-gray-600 transition-all"
             onClick={() => setIsOpen(false)}
           >
             <IoMdClose size={26} />
-          </Button>
+          </Button> */}
           <Link className="uppercase font-bold text-2xl" href={"/"}>
             Home
           </Link>
@@ -73,7 +73,17 @@ const Navbar = () => {
         className="md:hidden rounded-md border-gray-600 hover:bg-gray-600"
         onClick={() => setIsOpen(!isOpen)} // Toggle isOpen
       >
-        <HiMenuAlt2 size={26} />
+        {isOpen ? (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2 }}
+          >
+            <IoMdClose size={26} />
+          </motion.div>
+        ) : (
+          <HiMenuAlt2 size={26} />
+        )}
       </Button>
     </motion.div>
   );

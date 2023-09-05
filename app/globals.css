@@ -85,3 +85,28 @@ body {
   border-radius: 4px;
   white-space: nowrap;
 }
+
+.theRing {
+  position: absolute;
+  width: 138px;
+  height: 138px;
+  left: calc(50% - 69px);
+  top: calc(50% - 69px);
+  animation: rotate infinite linear 4s;
+}
+
+.theRing::before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-radius: 100%;
+  top: 0;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
