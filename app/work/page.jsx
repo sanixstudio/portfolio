@@ -29,6 +29,21 @@ const Works = () => {
       imageSrc: "/images/infomovia.png",
     },
     {
+      title: "Calmora",
+      description:
+        "Bring Serenity to Your Place With Interior Plants. Find your dream plant for your home decoration with us, and we will make it happen.",
+      techStack: [
+        "JavaScript",
+        "React",
+        "TailwindCSS",
+        "Framer-motion",
+        "react-scroll",
+      ],
+      demoLink: "https://calmora.vercel.app/",
+      codeLink: "https://github.com/sanixstudio/calmora.git",
+      imageSrc: "/images/calmora.svg",
+    },
+    {
       title: "Travel Tracker",
       description:
         "ExploreMap: Mark and remember your visited places with titles, descriptions, ratings, and photos on an interactive map. Visualize your travels, relive memories, and share your journey with friends. Create a personalized travel log with this intuitive maps and tracker app.",
