@@ -49,7 +49,7 @@ const Works = () => {
         "ExploreMap: Mark and remember your visited places with titles, descriptions, ratings, and photos on an interactive map. Visualize your travels, relive memories, and share your journey with friends. Create a personalized travel log with this intuitive maps and tracker app.",
       techStack: ["JavaScript", "TailwindCSS"],
       //TODO: add proper link for demo
-      demoLink: "https://github.com/sanixstudio/travel-tracker-vite.git",
+      demoLink: "https://travel-tracker-wine.vercel.app/",
       codeLink: "https://github.com/sanixstudio/travel-tracker-vite.git",
       imageSrc: "/images/travel.png",
     },
